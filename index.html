@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav {
@@ -67,27 +68,26 @@
         .social-icons {
             display: flex;
             gap: 1rem;
-            /* margin-top: 1rem; */
         }
 
-.social-icons a {
-    color: #ffffff;
+        .social-icons a {
+            color: #ffffff;
             font-size: 1.2rem;
-    display: inline-block;
-    transition: transform 0.2s ease;
-    fill: white;
-}
+            display: inline-block;
+            transition: transform 0.2s ease;
+            fill: white;
+        }
 
-.social-icons a:hover {
-    color: #007AFF;
-  transform: scale(1.1);
-}
+        .social-icons a:hover {
+            color: #007AFF;
+            transform: scale(1.1);
+        }
 
-.social-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
 
 
         /* Main Content */
@@ -101,7 +101,6 @@
             display: flex;
             align-items: center;
             gap: 4rem;
-            /* margin-bottom: 4rem; */
             padding: 1rem 0;
         }
 
@@ -120,7 +119,6 @@
             object-fit: cover;
             display: block;
             border-radius: 25px;
-            /* filter: grayscale(100%); */
         }
 
         /* Gradient overlay */
@@ -130,13 +128,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.6) 10%,
-                rgba(0, 0, 0, 0) 35%,
-                rgba(0, 0, 0, 0) 55%,
-                rgba(0, 0, 0, 0.6) 90%
-                );
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.6) 10%,
+                    rgba(0, 0, 0, 0) 35%,
+                    rgba(0, 0, 0, 0) 55%,
+                    rgba(0, 0, 0, 0.6) 90%);
             border-radius: 15px;
             pointer-events: none;
         }
@@ -168,10 +164,10 @@
             border: none;
             border-radius: 8px;
             font-size: 1rem;
-             font-weight: 600;
+            font-weight: 600;
             cursor: pointer;
             transition: background-color 0.2s ease;
-            text-decoration: none;            
+            text-decoration: none;
         }
 
         .cta-button:hover {
@@ -183,6 +179,7 @@
             padding: 1rem 0;
             overflow: visible;
             margin-bottom: 1rem;
+            scroll-margin-top: 70px;
         }
 
         .section h2 {
@@ -193,7 +190,6 @@
 
         .section p {
             color: #cccccc;
-            max-width: 800px;
             margin-bottom: 1rem;
         }
 
@@ -206,32 +202,87 @@
 
         .skill-tag {
             background-color: #333333;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 8px 14px;
+            border-radius: 10px;
             font-size: 0.9rem;
             color: #ffffff;
-            border: 1px solid #444444;
         }
 
         /* Experience */
+
         .experience-item {
+            display: block;
             background-color: #2a2a2a;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             margin-bottom: 1rem;
             border-left: 4px solid #007AFF;
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .experience-item:hover {
+            transform: scale(1.01);
+        }
+
+        .experience-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .experience-text {
+            max-width: 80%;
+        }
+
+        .experience-logo {
+            background-color: #ffffff;
+            padding: 0.4rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: auto;
+            min-width: 60px;
+        }
+
+        .experience-logo img {
+            height: 30px;
+            object-fit: contain;
         }
 
         .experience-item h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            color: #ffffff;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #cccccc;
             margin-bottom: 0.5rem;
         }
 
-        .experience-item .duration {
+        .duration {
             color: #888888;
             font-size: 0.9rem;
-            margin-bottom: 1rem;
         }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .experience-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .experience-logo {
+                margin-top: 1rem;
+                align-self: flex-end;
+            }
+        }
+
 
         /* Projects */
         .projects-grid {
@@ -315,59 +366,6 @@
             background: linear-gradient(135deg, #c7e8d4, #b0d4c7);
         }
 
-        .phone-mockup {
-            width: 120px;
-            height: 200px;
-            background-color: #000;
-            border-radius: 20px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .phone-screen {
-            flex: 1;
-            background-color: #fff;
-            border-radius: 15px;
-            padding: 10px;
-            position: relative;
-        }
-
-        .phone-mockup::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 4px;
-            background-color: #333;
-            border-radius: 2px;
-        }
-
-        .phone-mockup::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30px;
-            height: 30px;
-            border: 2px solid #333;
-            border-radius: 50%;
-        }
-
-        .app-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 0.7rem;
-        }
-
         .project-info {
             padding: 1.5rem;
         }
@@ -434,46 +432,46 @@
                 font-size: 1.5rem;
             }
         }
-        
+
         .certifications-container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: stretch; 
-  margin-top: 1rem;
-}
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-top: 1rem;
+        }
 
-.cert-item {
-  flex: 1 1 200px;
-  max-width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; 
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
+        .cert-item {
+            flex: 1 1 200px;
+            max-width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
 
-.badge-img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
+        .badge-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
 
-.cert-text {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  word-wrap: break-word;
-  max-width: 100%;
-}
-
+        .cert-text {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -486,7 +484,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                 </ul>
-                
+
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/snehavg94/" target="_blank" title="LinkedIn">
                         <img src="images/linkedin.png" alt="LinkedIn" class="social-icon" />
@@ -516,10 +514,21 @@
             </section>
 
             <section id="about" class="section">
-                <h2>About</h2>
-                <p>I am an iOS Developer with 8 years of experience building mobile apps in Swift and Objective-C. I enjoy 
-                    crafting intuitive apps and have worked on projects ranging from real estate to automotive 
-                    and fitness. Passionate about clean code, user experience, and lifelong learning.</p>
+                <h2>My Journey</h2>
+                <p>I am a mobile application developer with over 8 years of experience in building iOS applications. My
+                    journey into technology began with a curiosity for how things work and a passion for solving
+                    real-world problems — even during my school days, I was fascinated by how software could improve
+                    everyday life.</p>
+
+                <p>After completing a degree in Information Technology, I began my career in India, working on a range
+                    of mobile applications across domains such as real estate, e-commerce, and automotive. I have
+                    delivered end-to-end features in native iOS apps using Swift, and have integrated technologies such
+                    as REST APIs, Firebase, Google Maps, and offline caching. One of my most rewarding experiences was
+                    enhancing the functionality of an iOS app for a leading real estate client, contributing to a
+                    smoother property booking experience.</p>
+
+                <p>I am currently focusing on expanding my expertise with Swift Concurrency, SwiftUI, and adopting clean
+                    architectural patterns like MVVM and Coordinators.</p>
             </section>
 
             <section id="skills" class="section">
@@ -529,13 +538,14 @@
                     <span class="skill-tag">Objective-C</span>
                     <span class="skill-tag">TypeScript</span>
                     <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
                     <span class="skill-tag">C++</span>
                     <span class="skill-tag">SQL</span>
                 </div>
             </section>
 
-            <section id="skills" class="section">
+            <section id="frameworks" class="section">
                 <h2>Frameworks</h2>
                 <div class="skills-grid">
                     <span class="skill-tag">Angular</span>
@@ -543,7 +553,7 @@
                 </div>
             </section>
 
-            <section id="skills" class="section">
+            <section id="tools" class="section">
                 <h2>Tools</h2>
                 <div class="skills-grid">
                     <span class="skill-tag">Git</span>
@@ -562,17 +572,34 @@
 
             <section id="experience" class="section">
                 <h2>Experience</h2>
-                <div class="experience-item">
-                    <h3>Application Development Team Lead, Accenture</h3>
-                    <p class="duration">Nov 2020 - Jan 2025</p>
-                    <p>Developed and maintained multiple iOS applications, focusing on performance optimization and user experience. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Senior Engineer, QBurst</h3>
-                    <p class="duration">Jul 2016 - Nov 2020</p>
-                    <p>Developed and maintained multiple iOS applications, focusing on performance optimization and user experience. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
-                </div>
+
+                <a href="https://www.accenture.com" class="experience-item" target="_blank">
+                        <div class="experience-content">
+                            <div class="experience-text">
+                                <h3>Application Development Team Lead</h3>
+                                <p class="company-name">Accenture Solutions</p>
+                                <p class="duration">Nov 2020 - Jan 2025</p>
+                            </div>
+                            <div class="experience-logo">
+                                <img src="images/accenture-logo.svg" alt="Accenture Logo" />
+                            </div>
+                        </div>
+                </a>
+
+                <a href="https://www.qburst.com" class="experience-item" target="_blank">
+                    <div class="experience-content">
+                        <div class="experience-text">
+                            <h3>Senior Engineer</h3>
+                            <p class="company">QBurst</p>
+                            <p class="duration">Jul 2016 - Nov 2020</p>
+                        </div>
+                        <div class="experience-logo">
+                            <img src="images/qburst-logo.svg" alt="QBurst Logo" />
+                        </div>
+                    </div>
+                </a>
             </section>
+
 
             <section id="projects" class="section">
                 <h2>Projects</h2>
@@ -583,7 +610,9 @@
                         </div>
                         <div class="project-info">
                             <h3>Meeting Rooms Booking App</h3>
-                            <p>An app used by employees in the company to reserve seating spaces, meeting rooms etc in their respective offices across the globe, raise complaints about facilities in various rooms, add ratings, etc.</p>
+                            <p>An app used by employees in the company to reserve seating spaces, meeting rooms etc in
+                                their respective offices across the globe, raise complaints about facilities in various
+                                rooms, add ratings, etc.</p>
                         </div>
                     </div>
 
@@ -593,7 +622,9 @@
                         </div>
                         <div class="project-info">
                             <h3>Real Estate iOS App</h3>
-                            <p>A mobile app for real estate agents to check all the property details, including the size, location, standard, and additional features right on the listing and compare offers.</p>
+                            <p>A mobile app for real estate agents to check all the property details, including the
+                                size, location, standard, and additional features right on the listing and compare
+                                offers.</p>
                         </div>
                     </div>
 
@@ -603,7 +634,8 @@
                         </div>
                         <div class="project-info">
                             <h3>Shipments Tracking iOS App</h3>
-                            <p>An app to track movement of spare part shipments between warehouses and their dealers with three user roles - Driver, Dealer and Warehouse.</p>
+                            <p>An app to track movement of spare part shipments between warehouses and their dealers
+                                with three user roles - Driver, Dealer and Warehouse.</p>
                         </div>
                     </div>
 
@@ -613,7 +645,10 @@
                         </div>
                         <div class="project-info">
                             <h3>Vehicle Parts Tracking iOS App</h3>
-                            <p>An app for the service representatives of a vehicle company for documenting vehicle components. The intuitive operation makes it easy for them to scan and transfer the vehicle identification number (VIN) as well as the serial number of the old and new component.</p>
+                            <p>An app for the service representatives of a vehicle company for documenting vehicle
+                                components. The intuitive operation makes it easy for them to scan and transfer the
+                                vehicle identification number (VIN) as well as the serial number of the old and new
+                                component.</p>
                         </div>
                     </div>
 
@@ -623,7 +658,9 @@
                         </div>
                         <div class="project-info">
                             <h3>Ecommerce iOS App</h3>
-                            <p>An online community marketplace app for people all over the world to rent, buy or sell goods, or buy & sell any service - peer to peer, business to business, or business to consumer. </p>
+                            <p>An online community marketplace app for people all over the world to rent, buy or sell
+                                goods, or buy & sell any service - peer to peer, business to business, or business to
+                                consumer. </p>
                         </div>
                     </div>
 
@@ -633,7 +670,9 @@
                         </div>
                         <div class="project-info">
                             <h3>On-demand Car Services iOS App</h3>
-                            <p>An app for users to book vehicles for test drive and repair/maintenance. The users can select their desired vehicle model and provide their location from the map, and a convenient date and time to avail the services from automobile dealers nearby. </p>
+                            <p>An app for users to book vehicles for test drive and repair/maintenance. The users can
+                                select their desired vehicle model and provide their location from the map, and a
+                                convenient date and time to avail the services from automobile dealers nearby. </p>
                         </div>
                     </div>
 
@@ -643,7 +682,8 @@
                         </div>
                         <div class="project-info">
                             <h3>Car Dealer iOS App</h3>
-                            <p>An app for dealers and sales/service persons to get notified when a customer requests for test drive/maintenance. </p>
+                            <p>An app for dealers and sales/service persons to get notified when a customer requests for
+                                test drive/maintenance. </p>
                         </div>
                     </div>
 
@@ -653,7 +693,9 @@
                         </div>
                         <div class="project-info">
                             <h3>Fitness iOS App</h3>
-                            <p>An app to help users track and maintain a healthy lifestyle. The app provides the user with workout programs and workout videos for exercises that do not require any equipment. </p>
+                            <p>An app to help users track and maintain a healthy lifestyle. The app provides the user
+                                with workout programs and workout videos for exercises that do not require any
+                                equipment. </p>
                         </div>
                     </div>
 
@@ -663,7 +705,8 @@
                         </div>
                         <div class="project-info">
                             <h3>Insurance iOS App</h3>
-                            <p>An app for insurance policy owners to track driving behaviour of young drivers thereby analyse insurance policy usage.</p>
+                            <p>An app for insurance policy owners to track driving behaviour of young drivers thereby
+                                analyse insurance policy usage.</p>
                         </div>
                     </div>
 
@@ -673,7 +716,8 @@
                         </div>
                         <div class="project-info">
                             <h3>Community iOS App</h3>
-                            <p>A community app for the residents of a township to keep them updated with everything happening in their community at any given point of time. </p>
+                            <p>A community app for the residents of a township to keep them updated with everything
+                                happening in their community at any given point of time. </p>
                         </div>
                     </div>
 
@@ -683,7 +727,10 @@
                         </div>
                         <div class="project-info">
                             <h3>Preference Based Service Recommendation System</h3>
-                            <p>A recommendation system to improve personalisation in hotel recommendations. The system analyses user reviews using sentiment analysis and opinion mining and then applies the AHP, TF-IDF, and user-based Collaborative Filtering to calculate user similarity and generate tailored recommendations based on individual preferences. </p>
+                            <p>A recommendation system to improve personalisation in hotel recommendations. The system
+                                analyses user reviews using sentiment analysis and opinion mining and then applies the
+                                AHP, TF-IDF, and user-based Collaborative Filtering to calculate user similarity and
+                                generate tailored recommendations based on individual preferences. </p>
                         </div>
                     </div>
 
@@ -723,7 +770,7 @@
         });
 
         // Add scroll effect to header
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.backgroundColor = 'rgba(34, 34, 34, 0.95)';
@@ -733,4 +780,5 @@
         });
     </script>
 </body>
+
 </html>
