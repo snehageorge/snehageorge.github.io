@@ -443,6 +443,16 @@
             margin-top: 1rem;
         }
 
+        .cert-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+        .cert-link:hover {
+            opacity: 0.9;
+        }
+
         .cert-item {
             flex: 1 1 200px;
             max-width: 220px;
@@ -454,6 +464,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             text-align: center;
+            cursor: pointer;
         }
 
         .badge-img {
@@ -521,7 +532,8 @@
                     real-world problems — even during my school days, I was fascinated by how software could improve
                     everyday life.</p>
 
-                <p>After completing a degree in Information Technology, I began my career in India, working on a range
+                <p>After completing a Bachelors degree in Information Technology, I began my career in India, working on
+                    a range
                     of mobile applications across domains such as real estate, e-commerce, and automotive. I have
                     delivered end-to-end features in native iOS apps using Swift, and have integrated technologies such
                     as REST APIs, Firebase, Google Maps, and offline caching. One of my most rewarding experiences was
@@ -575,16 +587,16 @@
                 <h2>Experience</h2>
 
                 <a href="https://www.accenture.com" class="experience-item" target="_blank">
-                        <div class="experience-content">
-                            <div class="experience-text">
-                                <h3>Application Development Team Lead</h3>
-                                <p class="company-name">Accenture Solutions</p>
-                                <p class="duration">Nov 2020 - Jan 2025</p>
-                            </div>
-                            <div class="experience-logo">
-                                <img src="images/accenture-logo.svg" alt="Accenture Logo" />
-                            </div>
+                    <div class="experience-content">
+                        <div class="experience-text">
+                            <h3>Application Development Team Lead</h3>
+                            <p class="company-name">Accenture Solutions</p>
+                            <p class="duration">Nov 2020 - Jan 2025</p>
                         </div>
+                        <div class="experience-logo">
+                            <img src="images/accenture-logo.svg" alt="Accenture Logo" />
+                        </div>
+                    </div>
                 </a>
 
                 <a href="https://www.qburst.com" class="experience-item" target="_blank">
@@ -741,14 +753,20 @@
             <section id="certifications" class="section">
                 <h2>Certifications</h2>
                 <div class="certifications-container">
-                    <div class="cert-item">
-                        <img src="images/ace.png" alt="Google Cloud ACE Badge" class="badge-img" />
-                        <h3>Google Cloud Certified Associate Cloud Engineer</h3>
-                    </div>
-                    <div class="cert-item">
-                        <img src="images/cdl.png" alt="Google Cloud CDL Badge" class="badge-img" />
-                        <h3>Google Cloud Certified Cloud Digital Leader</h3>
-                    </div>
+                    <a href="https://www.credly.com/badges/5f64debc-f3d2-4dcf-95ea-fcdb9c4f8b44" target="_blank"
+                        rel="noopener" class="cert-link">
+                        <div class="cert-item">
+                            <img src="images/ace.png" alt="Google Cloud ACE Badge" class="badge-img" />
+                            <h3>Google Cloud Certified Associate Cloud Engineer</h3>
+                        </div>
+                    </a>
+                    <a href="https://www.credly.com/badges/e95f271d-6f42-4697-855f-2cf985e00636" target="_blank"
+                        rel="noopener" class="cert-link">
+                        <div class="cert-item">
+                            <img src="images/cdl.png" alt="Google Cloud CDL Badge" class="badge-img" />
+                            <h3>Google Cloud Certified Cloud Digital Leader</h3>
+                        </div>
+                    </a>
                 </div>
             </section>
 
@@ -779,6 +797,9 @@
                 header.style.backgroundColor = '#222';
             }
         });
+    </script>
+
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cd7b8b219ca14812a1bdbd134ae3a0e4"}'>
     </script>
 </body>
 
