@@ -6,488 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow" />
     <title>Sneha George - iOS Developer Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background-color: #222;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #007AFF;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-icons a {
-            color: #ffffff;
-            font-size: 1.2rem;
-            display: inline-block;
-            transition: transform 0.2s ease;
-            fill: white;
-        }
-
-        .social-icons a:hover {
-            color: #007AFF;
-            transform: scale(1.1);
-        }
-
-        .social-icon {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-        }
-
-
-        /* Main Content */
-        main {
-            margin-top: 80px;
-            padding: 2rem 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            padding: 1rem 0;
-        }
-
-        .hero-image {
-            flex: 0 0 520px;
-            height: 400px;
-            border-radius: 25px;
-            overflow: hidden;
-            position: relative;
-            background-color: #111111;
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 25px;
-        }
-
-        /* Gradient overlay */
-        .image-gradient {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right,
-                    rgba(0, 0, 0, 0.6) 10%,
-                    rgba(0, 0, 0, 0) 35%,
-                    rgba(0, 0, 0, 0) 55%,
-                    rgba(0, 0, 0, 0.6) 90%);
-            border-radius: 15px;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            flex: 1;
-            padding-left: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: #ffffff;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: #cccccc;
-            margin-bottom: 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 0.8rem 1.6rem;
-            background-color: #007AFF;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Sections */
-        .section {
-            padding: 1rem 0;
-            overflow: visible;
-            margin-bottom: 1rem;
-            scroll-margin-top: 70px;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .section p {
-            color: #cccccc;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-tag {
-            background-color: #333333;
-            padding: 8px 14px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #ffffff;
-        }
-
-        /* Experience */
-
-        .experience-item {
-            display: block;
-            background-color: #2a2a2a;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            border-left: 4px solid #007AFF;
-            color: inherit;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-
-        .experience-item:hover {
-            transform: scale(1.01);
-        }
-
-        .experience-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .experience-text {
-            max-width: 80%;
-        }
-
-        .experience-logo {
-            background-color: #ffffff;
-            padding: 0.4rem;
-            border-radius: 8px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            height: auto;
-            min-width: 60px;
-        }
-
-        .experience-logo img {
-            height: 30px;
-            object-fit: contain;
-        }
-
-        .experience-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-            color: #ffffff;
-        }
-
-        .company-name {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #cccccc;
-            margin-bottom: 0.5rem;
-        }
-
-        .duration {
-            color: #888888;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 600px) {
-            .experience-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .experience-logo {
-                margin-top: 1rem;
-                align-self: flex-end;
-            }
-        }
-
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-            overflow: visible;
-        }
-
-        .project-card {
-            background-color: #2a2a2a;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            height: 250px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 15px;
-        }
-
-
-        .project-card:nth-child(1) .project-image {
-            background: linear-gradient(135deg, #f4d4c7, #e8c4b0);
-        }
-
-        .project-card:nth-child(2) .project-image {
-            background: linear-gradient(135deg, #c7e8d4, #b0d4c7);
-        }
-
-        .project-card:nth-child(3) .project-image {
-            background: linear-gradient(135deg, #f4d4c7, #e8c4b0);
-        }
-
-        .project-card:nth-child(4) .project-image {
-            background: linear-gradient(135deg, #c7e8d4, #b0d4c7);
-        }
-
-        .project-card:nth-child(5) .project-image {
-            background: linear-gradient(135deg, #f4d4c7, #e8c4b0);
-        }
-
-        .project-card:nth-child(6) .project-image {
-            background-color: #fffee2;
-        }
-
-        .project-card:nth-child(7) .project-image {
-            background-color: #367491;
-        }
-
-        .project-card:nth-child(8) .project-img {
-            background: linear-gradient(135deg, #f4d4c7, #e8c4b0);
-            object-fit: cover;
-        }
-
-        .project-card:nth-child(9) .project-img {
-            background: linear-gradient(135deg, #c7e8d4, #b0d4c7);
-            object-fit: cover;
-        }
-
-        .project-card:nth-child(10) .project-image {
-            background: linear-gradient(135deg, #f4d4c7, #e8c4b0);
-        }
-
-        .project-card:nth-child(11) .project-image {
-            background: linear-gradient(135deg, #c7e8d4, #b0d4c7);
-        }
-
-        .project-info {
-            padding: 1.5rem;
-        }
-
-        .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-info p {
-            color: #cccccc;
-            font-size: 0.9rem;
-        }
-
-        /* Certifications */
-        .cert-item {
-            background-color: #2a2a2a;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #007AFF;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-image {
-                flex: none;
-                width: 250px;
-                height: 250px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        .certifications-container {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: stretch;
-            margin-top: 1rem;
-        }
-
-        .cert-link {
-            text-decoration: none;
-            color: inherit;
-            display: inline-block;
-        }
-
-        .cert-link:hover {
-            opacity: 0.9;
-        }
-
-        .cert-item {
-            flex: 1 1 200px;
-            max-width: 220px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .badge-img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-
-        .cert-text {
-            font-size: 0.95rem;
-            line-height: 1.4;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header>
+    <header id="main-header" role="banner">
         <div class="container">
-            <nav>
+            <nav aria-label="Main Navigation">
                 <div class="logo">Sneha's Portfolio</div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -498,11 +23,11 @@
                 </ul>
 
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/snehavg94/" target="_blank" title="LinkedIn">
-                        <img src="images/linkedin.png" alt="LinkedIn" class="social-icon" />
+                    <a href="https://www.linkedin.com/in/snehavg94/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <img src="images/linkedin.png" alt="LinkedIn Logo" class="social-icon" loading="lazy" />
                     </a>
-                    <a href="https://github.com/snehageorge" target="_blank" title="GitHub">
-                        <img src="images/github-mark.svg" alt="GitHub" class="social-icon" />
+                    <a href="https://github.com/snehageorge" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <img src="images/github-mark.svg" alt="GitHub Logo" class="social-icon" loading="lazy" />
                     </a>
 
                 </div>
@@ -515,18 +40,18 @@
         <div class="container">
             <section class="hero">
                 <div class="hero-image">
-                    <img src="images/profilePic.jpg" alt="Profile Photo" class="avatar">
+                    <img src="images/profilePic.jpg" alt="Profile Photo" class="avatar" loading="lazy" >
                     <div class="image-gradient"></div>
                 </div>
                 <div class="hero-content">
                     <h1>Sneha George</h1>
-                    <p class="subtitle">Mobile Developer | iOS Developer</p>
+                    <p class="subtitle">Mobile Developer | iOS Developer | Swift & SwiftUI Enthusiast</p>
                     <a href="#projects" class="cta-button">View Projects</a>
                 </div>
             </section>
 
-            <section id="about" class="section">
-                <h2>My Journey</h2>
+            <section id="about" class="section" aria-labelledby="my-journey-heading">
+                <h2 id="my-journey-heading">My Journey</h2>
                 <p>I am a mobile application developer with over 8 years of experience in building iOS applications. My
                     journey into technology began with a curiosity for how things work and a passion for solving
                     real-world problems — even during my school days, I was fascinated by how software could improve
@@ -544,8 +69,8 @@
                     architectural patterns like MVVM and Coordinators.</p>
             </section>
 
-            <section id="skills" class="section">
-                <h2>Programming Languages</h2>
+            <section id="skills" class="section" aria-labelledby="languages-heading">
+                <h2 id="languages-heading">Programming Languages</h2>
                 <div class="skills-grid">
                     <span class="skill-tag">Swift</span>
                     <span class="skill-tag">Objective-C</span>
@@ -558,16 +83,16 @@
                 </div>
             </section>
 
-            <section id="frameworks" class="section">
-                <h2>Frameworks</h2>
+            <section id="frameworks" class="section" aria-labelledby="frameworks-heading">
+                <h2 id="frameworks-heading">Frameworks</h2>
                 <div class="skills-grid">
                     <span class="skill-tag">Angular</span>
                     <span class="skill-tag">Ionic</span>
                 </div>
             </section>
 
-            <section id="tools" class="section">
-                <h2>Tools</h2>
+            <section id="tools" class="section" aria-labelledby="tools-heading">
+                <h2 id="tools-heading">Tools</h2>
                 <div class="skills-grid">
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">Jira</span>
@@ -583,10 +108,10 @@
                 </div>
             </section>
 
-            <section id="experience" class="section">
-                <h2>Experience</h2>
+            <section id="experience" class="section" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
 
-                <a href="https://www.accenture.com" class="experience-item" target="_blank">
+                <a href="https://www.accenture.com" class="experience-item" target="_blank" rel="noopener noreferrer">
                     <div class="experience-content">
                         <div class="experience-text">
                             <h3>Application Development Team Lead</h3>
@@ -594,12 +119,12 @@
                             <p class="duration">Nov 2020 - Jan 2025</p>
                         </div>
                         <div class="experience-logo">
-                            <img src="images/accenture-logo.svg" alt="Accenture Logo" />
+                            <img src="images/accenture-logo.svg" alt="Accenture Logo" loading="lazy" />
                         </div>
                     </div>
                 </a>
 
-                <a href="https://www.qburst.com" class="experience-item" target="_blank">
+                <a href="https://www.qburst.com" class="experience-item" target="_blank" rel="noopener noreferrer">
                     <div class="experience-content">
                         <div class="experience-text">
                             <h3>Senior Engineer</h3>
@@ -607,19 +132,18 @@
                             <p class="duration">Jul 2016 - Nov 2020</p>
                         </div>
                         <div class="experience-logo">
-                            <img src="images/qburst-logo.svg" alt="QBurst Logo" />
+                            <img src="images/qburst-logo.svg" alt="QBurst Logo" loading="lazy" />
                         </div>
                     </div>
                 </a>
             </section>
 
-
-            <section id="projects" class="section">
-                <h2>Projects</h2>
+            <section id="projects" class="section" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/calendar.jpg" alt="Meeting Rooms Booking App" class="project-img" />
+                            <img src="images/calendar.jpg" alt="Meeting Rooms Booking App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Meeting Rooms Booking App</h3>
@@ -627,34 +151,34 @@
                                 their respective offices across the globe, raise complaints about facilities in various
                                 rooms, add ratings, etc.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/real-estate.jpg" alt="Real Estate App" class="project-img" />
+                            <img src="images/real-estate.jpg" alt="Real Estate App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Real Estate iOS App</h3>
-                            <p>A mobile app for real estate agents to check all the property details, including the
+                            <p>An app for real estate agents to check all the property details, including the
                                 size, location, standard, and additional features right on the listing and compare
                                 offers.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/truck.png" alt="Shipments Tracking iOS App" class="project-img" />
+                            <img src="images/truck.png" alt="Shipments Tracking iOS App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Shipments Tracking iOS App</h3>
                             <p>An app to track movement of spare part shipments between warehouses and their dealers
                                 with three user roles - Driver, Dealer and Warehouse.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/scan.png" alt="Automotive iOS App" class="project-img" />
+                            <img src="images/scan.png" alt="Automotive iOS App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Vehicle Parts Tracking iOS App</h3>
@@ -663,11 +187,11 @@
                                 vehicle identification number (VIN) as well as the serial number of the old and new
                                 component.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/ecom.png" alt="Ecommerce iOS App" class="project-img" />
+                            <img src="images/ecom.png" alt="Ecommerce iOS App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Ecommerce iOS App</h3>
@@ -675,11 +199,11 @@
                                 goods, or buy & sell any service - peer to peer, business to business, or business to
                                 consumer. </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/car.jpg" alt="Automotive App" class="project-img" />
+                            <img src="images/car.jpg" alt="Automotive App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>On-demand Car Services iOS App</h3>
@@ -687,22 +211,22 @@
                                 select their desired vehicle model and provide their location from the map, and a
                                 convenient date and time to avail the services from automobile dealers nearby. </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/car2.jpg" alt="Automotive App" class="project-img" />
+                            <img src="images/car2.jpg" alt="Automotive App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Car Dealer iOS App</h3>
                             <p>An app for dealers and sales/service persons to get notified when a customer requests for
                                 test drive/maintenance. </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/fitness.jpg" alt="Fitness App" class="project-img" />
+                            <img src="images/fitness.jpg" alt="Fitness App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Fitness iOS App</h3>
@@ -710,33 +234,33 @@
                                 with workout programs and workout videos for exercises that do not require any
                                 equipment. </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/insurance.jpg" alt="Vehicle Insurance App" class="project-img" />
+                            <img src="images/insurance.jpg" alt="Vehicle Insurance App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Insurance iOS App</h3>
                             <p>An app for insurance policy owners to track driving behaviour of young drivers thereby
                                 analyse insurance policy usage.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/gdl.jpg" alt="Community App" class="project-img" />
+                            <img src="images/gdl.jpg" alt="Community App Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Community iOS App</h3>
                             <p>A community app for the residents of a township to keep them updated with everything
                                 happening in their community at any given point of time. </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
+                    <article class="project-card">
                         <div class="project-image">
-                            <img src="images/hotel.jpg" alt="Hotel Recommendations Website" class="project-img" />
+                            <img src="images/hotel.jpg" alt="Hotel Recommendations Website Image" class="project-img" loading="lazy" />
                         </div>
                         <div class="project-info">
                             <h3>Preference Based Service Recommendation System</h3>
@@ -745,7 +269,7 @@
                                 AHP, TF-IDF, and user-based Collaborative Filtering to calculate user similarity and
                                 generate tailored recommendations based on individual preferences. </p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
@@ -754,16 +278,16 @@
                 <h2>Certifications</h2>
                 <div class="certifications-container">
                     <a href="https://www.credly.com/badges/5f64debc-f3d2-4dcf-95ea-fcdb9c4f8b44" target="_blank"
-                        rel="noopener" class="cert-link">
+                        rel="noopener noreferrer" class="cert-link">
                         <div class="cert-item">
-                            <img src="images/ace.png" alt="Google Cloud ACE Badge" class="badge-img" />
+                            <img src="images/ace.png" alt="Google Cloud ACE Badge" class="badge-img" loading="lazy" />
                             <h3>Google Cloud Certified Associate Cloud Engineer</h3>
                         </div>
                     </a>
                     <a href="https://www.credly.com/badges/e95f271d-6f42-4697-855f-2cf985e00636" target="_blank"
-                        rel="noopener" class="cert-link">
+                        rel="noopener noreferrer" class="cert-link">
                         <div class="cert-item">
-                            <img src="images/cdl.png" alt="Google Cloud CDL Badge" class="badge-img" />
+                            <img src="images/cdl.png" alt="Google Cloud CDL Badge" class="badge-img" loading="lazy" />
                             <h3>Google Cloud Certified Cloud Digital Leader</h3>
                         </div>
                     </a>
@@ -773,34 +297,16 @@
         </div>
     </main>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(34, 34, 34, 0.95)';
-            } else {
-                header.style.backgroundColor = '#222';
-            }
-        });
-    </script>
-
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cd7b8b219ca14812a1bdbd134ae3a0e4"}'>
     </script>
+    <script src="main.js" defer></script>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Sneha George. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
